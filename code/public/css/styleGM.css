@@ -1,0 +1,177 @@
+html, body {
+    background-color: #252830;
+    color: #D9EEF6;
+}
+
+body {
+    display: flex;
+    width: 1200px;
+    margin: 60px auto auto auto;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    border-right: 0px solid #434857;
+}
+
+nav a, nav a:visited  {
+    padding: 10px 15px;
+    color: lightgray;
+    border-radius: 5px;
+    transition: .1s ease-in-out all;
+}
+
+nav a:hover, nav a:focus {
+    text-decoration: none;
+    background-color: #17A2B8;
+    color: white;
+}
+
+.logout, .logout:visited {
+    color: #575d70;
+}
+
+.logout:hover, .logout:focus {
+    color: #717580;
+    background-color: transparent;
+}
+
+nav .card {
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+nav .card img {
+    margin: auto;
+    width: 60%;
+    border-radius: 200px;
+}
+
+nav .card h4 {
+    font-weight: 100;
+    font-size: 1.3em;
+}
+
+nav .card hr {
+    width: 60%;
+    border-color: #434857;
+    margin: 0 auto;
+}
+
+h3 {
+    font-size: 2.5em;
+    font-weight: 100;
+}
+
+h5 {
+    font-size: 1.3em;
+    font-weight: 100;
+    color: #575d70;
+    letter-spacing: .1em;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #434857;
+}
+
+.card-columns  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-columns .card {
+    background: #3d414e;
+    width: 49%;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0 0 0;
+}
+
+.card-body .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.card-body p span {
+    font-size: 0.7em;
+    background-color: #343844;
+    padding: 5px 10px;
+    border-radius: 3px;
+}
+
+.card-body p .victory {
+    font-size: 0.8em;
+    background-color: #17A2B8;
+}
+
+.card-body p .fail {
+    font-size: 0.8em;
+    background-color: #E64759;
+}
+
+.card-body p .current {
+    font-size: 0.8em;
+    color: rgb(15, 30, 44);
+    background-color: rgb(233, 233, 233);
+}
+
+.card-body .container p a, .card-body .container p a:visited {
+    color: #f3f3f3;
+}
+
+.card-body .container p a:hover, .card-body .container p a:focus {
+    color: white;
+    text-decoration: none;
+}
+
+.askingHelp h4 {
+    font-weight: 100;
+    margin: 40px 0 20px 0;
+}
+
+.askingHelp h4:first-child {
+    margin-top: 10px;
+}
+.askingHelp a, .askingHelp a:visited {
+    color: lightgray;
+}
+
+.askingHelp a:hover, .askingHelp a:focus {
+    text-decoration: none;
+    color: white;
+}
+
+#helpFormGM textarea {
+    width: 100%;
+    resize: none;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    margin-bottom: 10px;
+}
+
+#messagesDiv p { margin: 0; padding: 0; } 
+.demandMsgGM {
+    background-color: #f3f3f3;
+    padding: 10px 15px;
+    border-radius: 3px;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.answerMsgGM {
+    background-color: #17A2B8;
+    padding: 10px 15px;
+    text-align: right;
+    border-radius: 3px;
+    color: whitesmoke;
+    margin-bottom: 10px;
+}

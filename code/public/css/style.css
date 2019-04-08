@@ -1,0 +1,752 @@
+﻿html, body {
+  scroll-behavior: none;
+  overflow: hidden;
+}
+
+.cardNewGame {
+  width: 500px;
+  color: whitesmoke;
+  background-size: 150%;
+  background-position: center;
+  transition: .5s ease-in-out;
+  border: 0;
+  box-shadow: 0 0 30px rgb(26, 26, 26);
+}
+
+.cardNewGame:hover {
+  box-shadow: 0 0 50px rgb(26, 26, 26);
+  background-size: 165%;
+}
+
+.cardNewGame > .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.cardNewGame h5 { 
+  font-weight: 100; 
+  font-size: 1.8em; 
+  letter-spacing: 6px;
+  padding: 10px 30px;
+}
+
+.cardNewGame strong {
+  font-weight: 500;
+}
+
+.cardNewGame .timerLink, .cardNewGame .timerLink:visited {
+  padding: 10px 20px;
+  margin: auto 10px;
+  color: whitesmoke;
+  border-radius: 100px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.cardNewGame .timerLink:hover, .cardNewGame .timerLink:focus {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  outline: none;
+}
+
+.linkGM, .linkGM:visited {
+  padding: 10px 20px;
+  margin: 10px;
+  color: rgb(26, 26, 26);
+  border-radius: 100px;
+  background-color: rgba(82, 63, 63, 0.1);
+}
+
+.linkGM:hover, .linkGM:focus {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(4, 142, 167, 1);
+  outline: none;
+}
+#bigContainer {
+  height: 100vh;
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainBox {
+  display: flex;
+  position: absolute;
+  margin-top:-25px;
+  height: auto;
+  width: 70% !important;
+  z-index: 10;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.riddleBox {
+  width: 53% !important;
+  height: 400px;
+  background: rgba(31, 30, 30, 1);
+  color: white;
+  padding: 0px 40px 40px 40px;
+  margin: 20px;
+  -webkit-box-shadow: 0px 0px 100px 10px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 100px 10px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 100px 10px rgba(0,0,0,0.5);
+  transition: all 2s;
+}
+
+.riddleBox:hover {
+  width: 54% !important;
+  height: 410px;
+  -webkit-box-shadow: 0px 0px 100px 10px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 100px 10px rgba(0,0,0,0.8);
+  box-shadow: 0px 0px 100px 10px rgba(0,0,0,0.8);
+  transition: all 1s;
+}
+
+.btnArrows {
+  all: initial;
+  background: none;
+  width: 15%;
+}
+
+.arrow {
+  width: 100%;
+  transition: all 2s;
+}
+
+.arrow:hover {
+  cursor: pointer;
+  width: 120%;
+  transition: all 1s;
+}
+
+.backgroundParallax {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: 1;
+  height: 100vh;
+  width: 100%;
+}
+
+.lensParallax {
+  background-size: cover;
+  background-position: center;
+  position: absolute;
+  z-index: 2;
+  height: 100vh;
+  width: 100%;
+}
+
+/* Special home */
+.btn-close {
+  color: whitesmoke;
+  background-color: rgb(10, 69, 104);
+}
+
+.btn-close:hover {
+  color: white;
+  background-color: rgb(12, 86, 129);
+}
+
+.home .btn-primary {
+  font-size: 1.3em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  margin: 15px 90px;
+  background: none;
+  border: 0;
+  color: lightgray;
+
+  position: absolute; 
+  z-index: 5000;
+  transition: 0.2s linear .1s;
+}
+
+.home .btn-primary:hover {
+  text-decoration: none;
+  background: rgb(27, 27, 27);
+  border: 0;
+  color: whitesmoke;
+  transition: 0.4s ease-out all .1s;
+}
+
+.home .btn-primary a {
+  color: whitesmoke;
+  text-decoration: none;
+  color: lightgray;
+}
+
+.btn-secondary, .btn-secondary:visited {
+  padding: 10px 20px;
+  margin: 10px;
+  color: rgb(26, 26, 26);
+  border-radius: 100px;
+  border: none;
+  background-color: rgba(82, 63, 63, 0.1);
+  transition: none;
+}
+
+.btn-secondary:hover, .btn-secondary:focus {
+  color: white;
+  text-decoration: none;
+  background-color: rgba(4, 142, 167, 1);
+  outline: none;
+  border: none;
+}
+
+.home .modal-dialog {
+  background: black;
+}
+
+.home .modal-content {
+  color: whitesmoke;
+  border: none;
+  background: none;
+  width: 700px;
+  padding: 60px;
+  padding-top: 10%;
+  margin: auto;
+  display: block;
+}
+
+.home .modal-content form {
+  text-align: right;
+  padding-right: 100px;
+}
+
+.home .modal-content form legend{
+  display: none;
+}
+
+.home .modal-content form input{
+  border: none;
+  border-bottom: 1px solid gray;
+  padding: 10px 10px 0 0;
+  margin-left: 10px;
+  background: none;
+  color: whitesmoke;
+}
+
+.home .modal-content form input:focus{
+  border-bottom: 1px solid lightgray;
+  outline: none;
+}
+
+.home .modal-body button {
+  all: initial;
+  color: whitesmoke;
+  background: none;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.home .modal-body button:hover {
+  cursor: pointer;
+  background: none;
+  color: white;
+  border: 1px solid whitesmoke;
+}
+
+.home .modal-header {
+  border: none;
+  justify-content: end;
+  display: inline;
+}
+
+.home .modal-header h5 {
+  font-weight: 100;
+  font-size: 1.7em;
+}
+
+.home .modal-footer {
+  border: none;
+  text-align: right;
+  display: inline;
+}
+
+.home .modal-footer button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 0 5px 5px;
+}
+
+.cinematicBox {
+  width: 100%;
+  background: black;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  height: 80px;
+  box-shadow: 0 0 100px 5px black;
+}
+
+.cinematicBox2 {
+  width: 90px;
+  height: 100vh;
+  background: black;
+  position: absolute;
+  z-index: 100;
+  bottom: 0;
+  box-shadow: 0 0 100px 5px black;
+  animation: fadeIn 1s;
+}
+
+.waves {
+  background-size: cover;
+  background-position: bottom;
+  position: absolute;
+  z-index: 7;
+  height: 100vh;
+  width: 100%;
+}
+
+.wavesReturned {
+  background-position: right top;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 7;
+  margin-top: -100px;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.9;
+}
+
+.wavesCastle {
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 7;
+  margin-top: -100px;
+  height: 100vh;
+  width: 100%;
+}
+
+.wavesNight {
+  background-size: auto;
+  background-position: bottom;
+  position: absolute;
+  z-index: 7;
+  margin-top: -180px;
+  height: 100vh;
+  width: 100%;
+}
+
+.greatWord {
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 8;
+  height: 100vh;
+  margin-top: -80px;
+  width: 100%;
+}
+
+.escapeWord {
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 10;
+  height: 100vh;
+  width: 100%;
+}
+
+.homeAction {
+  display: flex; 
+  flex-direction: column; 
+  justify-content: center; 
+  height: 100vh; 
+  align-items: center;
+  position: relative;
+  z-index: 999999;
+  background-color: rgba(0, 0, 0, .5);
+}
+
+.homeAction > .card {
+  box-shadow: 0 0 40px black;
+}
+
+/* LAUNCH MODAL - to make it full screen */
+.modal {
+  position: absolute;
+  text-align: center;
+  z-index: 9999;
+}
+
+.modal-dialog {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.modal-content {
+  height: auto;
+  min-height: 100%;
+  border-radius: 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.jumbotron {
+  background: none;
+}
+
+/* MENU PLAY */
+header > h4 {
+  margin-top: -50px;
+  transition: all .5s ease;
+}
+
+header:hover > h4 {
+  margin-top: 0px;
+  transition: all .5s ease;
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  margin: auto;
+  z-index: 5000; /* In front, but still before launch modal */
+}
+
+.music {
+  all: initial;
+}
+
+.music:focus {
+  all: initial;
+}
+
+.music:hover {
+  cursor: pointer;
+}
+
+#timerComponent {
+  text-align: right;
+  color: whitesmoke;
+  font-size: 1.2em;
+}
+
+#infosComponent {
+  text-align: right;
+  color: whitesmoke;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+}
+
+#infosComponent > span {
+  color: grey;
+}
+.indice {
+  color: grey;
+}
+
+#tipComponent {
+  display: none;
+  text-align: center;
+  color: whitesmoke;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  width: 60%;
+  padding-right: 10px;
+}
+
+.navbar {
+  width: 100%;
+  height: 80px;
+  margin: auto;
+  padding: 10px 40px;  
+  background: black;
+  background-repeat: repeat;
+  display: inline-flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.navbar > div {
+  width: 300px;
+  padding: 0;
+}
+
+.navbar-brand img {
+  width: 200px;
+}
+
+footer button {
+  background: none;
+  border: none;
+}
+
+footer button:focus {
+  outline: none;
+}
+
+#musicComponent {
+  text-align: center;
+}
+
+/* COMPONENTS */
+
+h4 {
+  text-align: center;
+  padding: 5px;
+  margin: auto;
+  width: 50%;
+  font-size: 1em;
+  color: rgb(19, 112, 167);
+  background: rgba(236, 236, 236, 0.8);
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);  
+}
+
+.validationRiddle {
+  position: absolute;
+  z-index: 5000;
+}
+
+#numberRiddle {
+  text-align: end;
+  margin-right: -30px;
+  color: rgb(139, 139, 139);
+  font-size: 1.1em;
+  padding: 5px;
+}
+
+#answerForm {
+  display: flex;
+  height: 100%;
+  overflow: hidden;
+  align-content: space-between;
+  justify-content: space-around;
+}
+
+#answerForm p {
+  text-align: center;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 150px;
+  width: 100%;
+  padding-right: 10px;
+  font-size: 1.1em;
+  letter-spacing: 1px;
+  font-weight: 100;
+  margin-top: 20px;
+}
+
+#answerForm h3 {
+  letter-spacing: 2px;
+  font-weight: 100;
+  margin: 40px 0 40px 0;
+}
+
+.response {
+  padding-top: 10px;
+  font-size: 1.5em;
+  font-weight: 100;
+}
+
+.response input {
+  background: transparent;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid whitesmoke;
+  color: whitesmoke;
+  font-weight: 100;
+  font-size: 1em;
+}
+
+.response input:focus {
+  outline: none;
+}
+
+hr.style11 {
+	height: 6px;
+	background: url(http://ibrahimjabbari.com/english/images/hr-11.png) repeat-x 0 0;
+  border: 0;
+}
+
+#riddle {
+  text-align: center;
+  width: 90%;
+}
+
+.validationRiddle {
+  position: absolute;
+  bottom: -50px;
+  z-index: -1;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px;
+  left: 35%;
+  width: 30%;
+  font-size: 1em;
+  color: rgb(19, 112, 167);
+  background: rgba(236, 236, 236, 0.9);
+  border-radius: 5px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, .5);  
+}
+
+/* END CHRONO */
+
+.end {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100vh;
+  background: black;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  z-index: 999999;
+}
+
+/* HELP */
+#helpButton {
+  position: absolute;
+  z-index: 5001;
+  border: 7px solid rgb(10, 69, 104);
+  border-radius: 100px;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 15px;
+  background: whitesmoke;
+  opacity: .5;
+  transition: all .5s;
+}
+
+#helpButton:hover {
+  -webkit-box-shadow: 0px 0px 0px 100px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0px 0px 100px rgba(0,0,0,0.3);
+  box-shadow: 0px 0px 0px 100px rgba(0,0,0,0.3);
+  opacity: 1;
+}
+
+#helpButton:focus {
+  outline: none;
+}
+
+.help {
+  position: absolute;
+  z-index: 5000;
+  right: 0;
+  bottom: 80px;
+  width: 400px;
+}
+
+.frameChat {
+  position: relative;
+  width: 350px;
+  background: rgba(31, 30, 30, 0.8);
+  padding: 0;
+  right: 75px;
+  overflow: hidden;
+}
+
+.frameChat > h5 {
+  background: rgb(10, 69, 104);
+  color: whitesmoke;
+  padding: 10px 15px;
+  margin-bottom: 0;
+  font-weight: 100;
+  font-size: 1.5em;
+  letter-spacing: 1px;
+}
+
+.questionHelp {
+  width: 250px;
+  padding: 10px;
+  margin-left: 100px;
+  background: #f3f3f3;
+  margin-bottom: 10px;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.answerHelp {
+  width: 250px;
+  padding: 10px;
+  background: lightblue;
+  margin-bottom: 10px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#helpForm {
+  width: 100%;
+  background: white;
+  height: 80px;
+}
+
+#helpForm textarea {
+  padding: 10px;
+  width: 90%;
+  background: white;
+  margin: 0;
+  border: none;
+  resize: none;
+}
+
+#helpForm textarea:focus {
+  outline: none;
+}
+
+#helpForm button {
+  width: 10%;
+  float: right;
+  border: none;
+  height: 80px;
+}
+
+#helpForm button:hover {
+  outline: none;
+  background: #f3f3f3;
+}
+
+#helpForm button:focus {
+  outline: none;
+  background: lightblue;
+}
+
+#helpMessages {
+  max-height: 350px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+#helpMessages span {
+  font-size: .8em;
+  display: block;
+  color: gray;
+}
+
+/* SCROLLBAR */
+
+.scrollbar::-webkit-scrollbar-track
+{
+	background-color: transparent;
+}
+
+.scrollbar::-webkit-scrollbar
+{
+	width: 3px;
+	background-color: rgba(0, 0, 0, 0.171);
+}
+
+.scrollbar::-webkit-scrollbar-thumb
+{
+	background-color: rgb(12, 86, 129);
+}

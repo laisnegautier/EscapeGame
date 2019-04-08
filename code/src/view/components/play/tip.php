@@ -1,0 +1,1 @@
+<div><span class="indice">Indice :</span> <?= $riddle[5] ?></div>
